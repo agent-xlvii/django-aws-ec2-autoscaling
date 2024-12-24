@@ -3,87 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeWithMuh</title>
+    <title>Anime Haven Blog</title>
     <!-- Add any additional CSS or stylesheets here -->
     <style>
         body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f2f2f2;
+            justify-content: flex-start;
+            padding: 20px;
+            background-image: url('https://example.com/anime-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
         }
         header {
             text-align: center;
             margin-bottom: 20px;
         }
         main {
-            text-align: center;
-            margin-bottom: 20px;
+            text-align: left;
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer {
             text-align: center;
+            margin-top: 20px;
         }
-        iframe {
+        h1, h2 {
+            text-shadow: 2px 2px 4px #000000;
+        }
+        article {
             margin-bottom: 20px;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 10px;
+        article h3 {
+            color: #ff66cc;
         }
-        button:hover {
-            background-color: #45a049;
+        article p {
+            line-height: 1.6;
         }
-        p {
-            margin-bottom: 10px;
+        .read-more {
+            color: #ff66cc;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 style="color: #ff6600;">Welcome to <span style="color: #0099cc;">CodeWithMuh</span> Youtube Channel!</h1>
+        <h1>Welcome to the <span style="color: #ff66cc;">Anime Haven Blog</span>!</h1>
     </header>
     <main>
-        <!-- Embed YouTube video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LaoYcQsPyD8?si=x84PLT5e3rSXbPvQ" frameborder="0" allowfullscreen></iframe>
-        <!-- Add custom message -->
-        <p style="color: #ff6600;">You are watching my latest video on <span style="color: #0099cc;">AWS EC2</span>.</p>
-        <!-- Add LinkedIn game -->
-        <h2 style="color: #0099cc;">LinkedIn Connection Game</h2>
-        <p style="color: #ff6600;">Are you connected with me on LinkedIn?</p>
-        <button onclick="checkLinkedInConnection()">Check Connection</button>
-        <p id="result"></p>
-        <!-- Add Subscribe button -->
-        <button onclick="subscribeToChannel()">Subscribe to my channel</button>
-        <button onclick="toGithubRepo()">Github Repo</button>
+        <article>
+            <h3>The Top 5 Must-Watch Anime This Season</h3>
+            <p>Discover the most exciting anime series to watch this season. From action-packed adventures to heartwarming stories, this list has something for everyone.</p>
+            <a href="#" class="read-more">Read more...</a>
+        </article>
+        <article>
+            <h3>How to Start Your Anime Journey</h3>
+            <p>New to anime? Check out our beginner's guide to get started with the most iconic series that will leave you hooked.</p>
+            <a href="#" class="read-more">Read more...</a>
+        </article>
+        <article>
+            <h3>Behind the Scenes: The Art of Anime</h3>
+            <p>Take a deep dive into the creative process of anime production, exploring the stunning artistry and storytelling techniques that make anime unique.</p>
+            <a href="#" class="read-more">Read more...</a>
+        </article>
     </main>
     <footer>
-        <p style="color: #ff6600;">&copy; 2024 <span style="color: #0099cc;">CodeWithMuh</span></p>
+        <p>&copy; 2024 <span style="color: #ff66cc;">Anime Haven</span>. All rights reserved.</p>
     </footer>
-    <!-- Add any additional scripts or JavaScript here -->
-    <script>
-        function checkLinkedInConnection() {
-            // Logic to check if user is connected on LinkedIn
-            var connected = Math.random() < 0.00; // 5% chance of being connected
-            var resultMessage = connected ? "Yes, you are connected with me on LinkedIn!" : "No, you are not connected with me on LinkedIn. Connect now: <a href='https://www.linkedin.com/in/muhammad-rashid-daha/' target='_blank'>Follow me on LinkedIn</a>";
-            document.getElementById("result").innerHTML = resultMessage;
-        }
-
-        function subscribeToChannel() {
-            // Redirect users to subscribe to the YouTube channel
-            window.open('https://youtube.com/@codewithmuh?sub_confirmation=1', '_blank');
-        }
-        function toGithubRepo() {
-            // Redirect users to subscribe to the YouTube channel
-            window.open('https://github.com/codewithmuh/django-aws-ec2-autoscaling.git', '_blank');
-        }
-    </script>
 </body>
 </html>
